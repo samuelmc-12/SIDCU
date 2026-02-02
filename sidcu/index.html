@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDCU — Simulador de Carreras Universitarias</title>
+    <link rel="icon" type="image/png" href="images/mascota.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/mascota.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">
+                <a href="./index.html" class="linksidcu"><span class="bold">SID</span><span class="purple">CU</span></a>
+            </h1>
+            <ul class="nav-links">
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./colaboradores.html">Colaboradores</a></li>
+                <li><a href="./carreras.html">Carreras</a></li>
+                <li><a href="./comparador.html">Comparador</a></li>
+                <li><a href="./test.html">Test Vocacional</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+        <h1>Ecuentra la mejor opción para estudiar</h1>
+        <div class="botones">
+            <button>PreGrado</button>
+            <button>PostGrado</button>
+            <button>Técnico</button>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar una carrera">
+            <button class="ciudad">Ciudad</button>    
+        </div>
+        <div class="registro">
+            <button class="iniciarsesion">Iniciar sesión</button>
+            <button class="registrarse">Registrarse</button>
+        </div>
+        <section class="actualizaciones">
+            <div class="actualizacionestitulo">
+                <h2>Actualizaciones</h2>
+                <button class="vertodasboton">Todas las Actualizaciones ➜</button>
+            </div>
+            <div class="actualizacionesarrow">
+                <div class="arrow arrow-left">‹</div>
+                  <div id="actualizacionescontenedor" class="actualizacionescontenedor"></div>
+                    <script src="./js/carrusel.js"></script>                                 
+                <div class="arrow arrow-right">›</div>
+                
+            </div>
+        </section>
+        <section class="info">
+            <div class="info-box">
+              <h2>¿Quiénes somos?</h2>
+              <p>
+                En SIDCU (Simulador de Carreras Universitarias) somos un equipo comprometido con el futuro académico de los jóvenes.
+                Nuestra misión es ayudar a los estudiantes de secundaria a descubrir su vocación mediante una experiencia interactiva,
+                moderna y personalizada. <a href="./nosotros.html">Leer más.</a>
+              </p>
+            </div>
+
+            <div class="divider"></div>
+            <div class="info-box">
+              <h2>¿Qué ofrecemos?</h2>
+              <p>
+                Explorar diferentes carreras universitarias y conocer sus características principales.  
+                Realizar tests de autoestima y habilidades, para descubrir qué programas se ajustan mejor a tus intereses.  
+                Simular la experiencia universitaria. <a href="./nosotros.html">Leer más.</a>
+              </p>
+            </div>
+        
+            <div class="divider"></div>
+        
+            <div class="info-box">
+              <h2>Mejores Oportunidades</h2>
+              <p>
+                Nuevas universidades aliadas que ofrecen programas innovadores.  
+                Promociones académicas y becas exclusivas.  
+                Noticias y actualizaciones sobre carreras emergentes y tendencias laborales. <a href="./nosotros.html">Leer más.</a>
+              </p>
+            </div>
+        </section>
+
+
+        <section class="suscripcion">
+          <h3>Sé el primero en enterarte</h3>
+          <p>
+            ¿Deseas que te informemos por correo sobre oportunidades de carreras o universidades que guardaste en la búsqueda?
+          </p>
+        
+          <div class="suscripcion-form">
+            <input type="email" placeholder="Correo Electrónico">
+            <button class="suscribirse">Suscribirse</button>
+          </div>
+        </section>
+
+    </main>
+
+
+    <!-- Mascota -->
+<div class="mascota-con-chat" aria-hidden="false">
+    <img src="./img/mascota.png" alt="Mascota SIDCU" class="mascota" id="mascotaBtn" />
+
+    <div class="chat-box" id="chatBox" role="dialog" aria-label="Chat de la mascota" aria-hidden="true" tabindex="-1">
+      <header class="chat-header">
+        <div class="chat-title">
+          <img src="./img/mascota.png" alt="" class="chat-avatar" aria-hidden="true" />
+          <span>SIDCU</span>
+        </div>
+        <div class="chat-controls">
+          <button class="chat-minimize" id="minimizeChat" title="Cerrar chat" aria-label="Cerrar chat">✕</button>
+        </div>
+      </header>
+
+      <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+
+      <form class="chat-input-area" id="chatForm" action="#" onsubmit="return false;">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Escribe un mensaje..." aria-label="Escribe un mensaje" autocomplete="off" />
+        <button type="submit" id="sendBtn" class="chat-send" aria-label="Enviar mensaje">Enviar</button>
+      </form>
+    </div>
+  </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+            <p>&copy; SIDCU - Simulador De Carreras Universitarias</p>
+            <div class="footer-links">
+              <a href="#">Política de privacidad</a>
+              <span>|</span>
+              <a href="#">Términos de uso</a>
+              <span>|</span>
+              <a href="#">Contacto</a>
+            </div>
+          </div>
+        </footer>
+      <script src="./js/mascota.js" defer></script>
+</body>
+</html>
+  

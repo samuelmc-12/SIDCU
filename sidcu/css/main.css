@@ -1,0 +1,277 @@
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #13002e;
+    padding: 3px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+  }
+button:hover {
+    background-color: #dfbaff;
+}
+.botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: #13002e;
+}
+input {
+    text-align: center;
+    padding: 7px 12px;
+    border-radius: 15px;
+    border: 2px solid #13002e;
+    font-size: 18px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscador {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.ciudad {
+    margin-left: 37%;
+    color: #13002e;
+}
+.ciudad:hover {
+  background-color: #dfbaff;
+}
+.registro {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+}
+.iniciarsesion {
+    padding: 6px 16px;
+    font-size: 20px;
+    border: 2px solid #13002e;
+    color: #13002e;
+}
+.registrarse {
+    padding: 6px 16px;
+    font-size: 20px;
+    background-color: #13002e;
+    color: white;
+    border: 2px solid white;
+}
+.registrarse:hover {
+    background-color: #2e0057;
+}
+.actualizaciones {
+    padding: 40px 60px;
+    text-align: center;
+    color: white;
+}
+.actualizacionestitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.actualizaciones h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 340px;    
+
+}
+.vertodasboton {
+    background-color: #13002e;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 14px;
+    margin-right: 340px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+.vertodasboton:hover {
+    background-color: #2e0057;
+}
+
+.actualizacionescontenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.actualizacion {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actualizacion img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.actualizacion p {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.actualizacion:hover {
+    transform: translateY(-5px);
+  box-shadow: 0 4px 24px 3px #d3c4e6;
+}
+
+.actualizacionesarrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+}
+
+
+.actualizacionescontenedor {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.arrow-left {
+  left: 18%;
+}
+
+.arrow-right {
+  right: 18%;
+}
+
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 80px;
+  color: white;
+  text-align: left;
+  background: transparent;
+}
+
+.info-box {
+  flex: 1;
+  max-width: 300px;
+}
+
+.info-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-box a {
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.divider {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  height: 200px;
+  align-self: center;
+}
+
+/* ===== SECCIÓN SUSCRIPCIÓN ===== */
+.suscripcion {
+  text-align: center;
+  color: white;
+  padding: 50px 20px 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.suscripcion h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.suscripcion p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.suscripcion-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.suscripcion-form input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 300px;
+  color: #000;
+  text-align: center;
+}
+
+.suscribirse {
+  background-color: #13002e;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.suscribirse:hover {
+  background-color: #2e0057;
+}

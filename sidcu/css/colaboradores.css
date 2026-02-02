@@ -1,0 +1,88 @@
+.colaboradores-intro {
+  text-align: center;
+  padding: 2.5rem 1rem 1.6rem 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.colaboradores-intro h1 {
+  font-size: 2.3rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0.8em;
+}
+
+.colaboradores-intro p {
+  font-size: 1.2rem;
+  color: #cbcbcb;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.universidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+.universidad {
+  background: #fff;
+  border-radius: 18px;
+  width: 250px;
+  text-align: center;
+  padding: 1.2rem 0.75rem 1.8rem 0.75rem;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.universidad:hover {
+  box-shadow: 0 4px 24px 3px #d3c4e6;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.universidad img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #f2eef6;
+  border: 2px solid #c2a6e3;
+}
+
+.universidad h2 {
+  font-size: 1.15rem;
+  color: #532e7a;
+  font-weight: 600;
+  margin: 0.7em 0 0.2em 0;
+}
+
+.universidad p {
+  font-size: 1rem;
+  color: #533e7a;
+  margin-bottom: 0.8em;
+}
+
+.universidad .ver-mas {
+  background-color: #13002e;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 0.44em 1.2em;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1em;
+  transition: background 0.25s;
+}
+
+.universidad .ver-mas:hover,
+.universidad .ver-mas:focus {
+  background-color: #2e0057;
+}

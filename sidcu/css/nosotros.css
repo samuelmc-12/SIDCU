@@ -1,0 +1,33 @@
+
+/*.divider {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  height: 500px;
+  align-self: center;
+}*/
+
+.info-box {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.info-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.info-box p {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.p2 {
+    justify-content: right;
+}

@@ -1,0 +1,158 @@
+.carreras-intro {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.carreras-intro h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+}
+
+.carreras-intro p {
+    font-size: 1.16rem;
+    color: #d3d3d3;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+}
+
+.busqueda-carrera {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    margin: 2em auto 1em auto;
+}
+
+.carrera-busqueda-input {
+    padding: 0.7em 1em;
+    border-radius: 8px;
+    border: 1px solid #ccccda;
+    width: 270px;
+    font-size: 1em;
+}
+
+.carrera-busqueda-btn {
+    background-color: #13002e;
+    color: white;
+    border: 2px solid white;
+    padding: 0.6em 1.3em;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+.carrera-busqueda-btn:hover {
+    background-color: #2e0057;
+}
+
+.areas-carreras {
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+.areas-carreras h2 {
+    color: #ffffff;
+    margin: 0.5em 0 0.6em 0;
+    font-size: 1.38rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.area-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9em;
+}
+.area-tabs button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 18px;
+    padding: 0.5em 1.4em;
+    font-size: 1em;
+    cursor: pointer;    
+    font-weight: 500;
+}
+.area-tabs button:hover,
+.area-tabs button:focus {
+    background-color: #dfbaff;
+
+}
+
+.carreras-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+.carrera-card {
+    background: #fff;
+    border-radius: 16px;
+    width: 240px;
+    max-width: 90vw;
+    text-align: center;
+    padding: 1.2rem 0.75rem 1.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrera-card:hover {
+    box-shadow: 0 3px 20px 3px #d3c4e6;
+    transform: translateY(-3px) scale(1.03);
+}
+.carrera-card img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #eee6f6;
+    border: 2px solid #c2a6e3;
+}
+.carrera-card h3 {
+    font-size: 1.09rem;
+    color: #532e7a;
+    font-weight: 600;
+    margin: 0.6em 0 0.3em 0;
+}
+.carrera-card p {
+    font-size: 1.01rem;
+    color: #533e7a;
+    margin-bottom: 0.8em;
+}
+.carrera-card p span {
+    display: block;
+    color: #714ca5;
+    font-size: 0.96em;
+    font-weight: 500;
+}
+.carrera-card .ver-detalle {
+    background-color: #13002e;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    padding: 0.44em 1em;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: auto;
+}
+.carrera-card .ver-detalle:hover,
+.carrera-card .ver-detalle:focus {
+    background-color: #2e0057;
+}
+
+.carrera-card.ingenieria { border-left: 4px solid #a183e4; }
+.carrera-card.salud { border-left: 4px solid #e04f4f; }
+.carrera-card.economia { border-left: 4px solid #35bba6; }
+.carrera-card.sociales { border-left: 4px solid #ffa726; }
+.carrera-card.arte { border-left: 4px solid #ce59ca; }
+.carrera-card.educacion { border-left: 4px solid #38b0e3; }
+

@@ -1,0 +1,52 @@
+.footer {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 14px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #c7a2ff; 
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links span {
+  color: rgba(255, 255, 255, 0.4);
+}
+main {
+  flex: 1;
+}
+html, body {
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+
+
