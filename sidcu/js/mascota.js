@@ -64,7 +64,6 @@
     function generateBotReply(userText) {
       const lower = userText.toLowerCase();
       if (lower.includes('hola') || lower.includes('holas')) return '¡Hola! ¿Cómo puedo ayudarte hoy?';
-      if (lower.includes('extrañe') || lower.includes('extraño')) return 'Yo te extrañe mas te amooooooo ';
       if (lower.includes('carrera') || lower.includes('carreras')) return '¿Qué tipo de carrera te interesa? (Pregrado, Postgrado, Técnico...)';
       if (lower.includes('beca') || lower.includes('becas')) return 'Puedes revisar la sección de oportunidades en nuestra página o suscribirte para recibir alertas.';
       if (lower.includes('gracia') || lower.includes('gracias')) return '¡Con todo el gusto! Aqui estare por si necesitas mas información.';
@@ -72,7 +71,6 @@
       if (lower.includes('postgrado') || lower.includes('postgrados')) return '¡Claro que si! Para mayor información, selecciona el botón PostGrado, que se encuentra en la parte superior de la pagina.';
       if (lower.includes('tecnico') || lower.includes('tecnicos')) return '¡Claro que si! Para mayor información, selecciona el botón Tecnico, que se encuentra en la parte superior de la pagina.';
       if (lower.includes('estudio') || lower.includes('estudios')) return 'Tipos de estudio: Presencial, Semipresencial y a Distancia. ¿Cuál te interesa?';
-
 
       return "Gracias por tu mensaje. Si quieres, dame más detalles o escribe 'ayuda' para opciones.";
     }
