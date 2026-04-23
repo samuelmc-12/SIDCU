@@ -42,11 +42,12 @@ input {
     justify-content: center;
     gap: 15px;
 }
-.ciudad {
+.buscar {
     margin-left: 37%;
     color: #13002e;
+    
 }
-.ciudad:hover {
+.buscar:hover {
   background-color: #dfbaff;
 }
 .registro {
