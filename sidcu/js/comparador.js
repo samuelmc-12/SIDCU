@@ -3,9 +3,9 @@ const carrieras = {
     nombre: "Ingeniería de Sistemas",
     categoria: "Ingeniería",
     duracion: "5 años",
-    arancel: "$4.500 USD/año",
+    costo: "$90.000.000 COP aprox.",
     ocupabilidad: "95%",
-    salario: "$3.200 USD/mes",
+    salario: "$4.500.000 COP/mes",
     descripcion: "Formación en desarrollo de software, bases de datos y sistemas computacionales.",
     habilidades: ["Programación", "Análisis", "Resolución de problemas"]
   },
@@ -13,9 +13,9 @@ const carrieras = {
     nombre: "Medicina",
     categoria: "Salud",
     duracion: "6 años",
-    arancel: "$6.000 USD/año",
+    costo: "$180.000.000 COP aprox.",
     ocupabilidad: "98%",
-    salario: "$4.500 USD/mes",
+    salario: "$6.500.000 COP/mes",
     descripcion: "Formación completa en ciencias de la salud y atención médica.",
     habilidades: ["Empatía", "Precisión", "Comunicación"]
   },
@@ -23,9 +23,9 @@ const carrieras = {
     nombre: "Economía",
     categoria: "Economía y Negocios",
     duracion: "4 años",
-    arancel: "$3.800 USD/año",
+    costo: "$60.000.000 COP aprox.",
     ocupabilidad: "88%",
-    salario: "$2.800 USD/mes",
+    salario: "$3.800.000 COP/mes",
     descripcion: "Análisis de sistemas económicos, finanzas y políticas comerciales.",
     habilidades: ["Análisis", "Estadística", "Pensamiento crítico"]
   },
@@ -33,9 +33,9 @@ const carrieras = {
     nombre: "Psicología",
     categoria: "Ciencias Sociales",
     duracion: "5 años",
-    arancel: "$3.200 USD/año",
+    costo: "$55.000.000 COP aprox.",
     ocupabilidad: "85%",
-    salario: "$2.500 USD/mes",
+    salario: "$3.000.000 COP/mes",
     descripcion: "Estudio del comportamiento humano y procesos mentales.",
     habilidades: ["Empatía", "Escucha activa", "Análisis"]
   },
@@ -43,9 +43,9 @@ const carrieras = {
     nombre: "Diseño Gráfico",
     categoria: "Arte y Diseño",
     duracion: "4 años",
-    arancel: "$2.800 USD/año",
+    costo: "$45.000.000 COP aprox.",
     ocupabilidad: "82%",
-    salario: "$2.200 USD/mes",
+    salario: "$2.500.000 COP/mes",
     descripcion: "Creación visual, comunicación gráfica y diseño digital.",
     habilidades: ["Creatividad", "Software de diseño", "Comunicación visual"]
   },
@@ -53,9 +53,9 @@ const carrieras = {
     nombre: "Ingeniería Civil",
     categoria: "Ingeniería",
     duracion: "5.5 años",
-    arancel: "$4.200 USD/año",
+    costo: "$80.000.000 COP aprox.",
     ocupabilidad: "92%",
-    salario: "$3.100 USD/mes",
+    salario: "$4.200.000 COP/mes",
     descripcion: "Diseño, construcción y mantenimiento de infraestructuras.",
     habilidades: ["Matemáticas", "CAD", "Liderazgo"]
   },
@@ -63,9 +63,9 @@ const carrieras = {
     nombre: "Licenciatura en Educación",
     categoria: "Educación",
     duracion: "4 años",
-    arancel: "$2.500 USD/año",
+    costo: "$40.000.000 COP aprox.",
     ocupabilidad: "90%",
-    salario: "$1.800 USD/mes",
+    salario: "$2.800.000 COP/mes",
     descripcion: "Formación docente y pedagogía educativa.",
     habilidades: ["Paciencia", "Comunicación", "Creatividad"]
   }
@@ -131,8 +131,8 @@ function crearTarjetaCarrera(codigoCarrera) {
         <span class="valor">${carrera.duracion}</span>
       </div>
       <div class="info-item">
-        <span class="label">Arancel anual:</span>
-        <span class="valor">${carrera.arancel}</span>
+        <span class="label">Costo:</span>
+        <span class="valor">${carrera.costo}</span>
       </div>
       <div class="info-item">
         <span class="label">Ocupabilidad:</span>

@@ -19,7 +19,7 @@
 }
 
 .comparador-intro p {
-  color: #c9c9c9;
+  color: #ffffff;
   max-width: 840px;
   margin: 0 auto;
   font-size: 0.98rem;
@@ -29,8 +29,9 @@
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(100,80,140,0.06);
+  box-shadow: 0 2px 12px rgba(100, 80, 140, 0.06);
   display: block;
+  margin-bottom: 2rem;
 }
 
 .comparador-form {
@@ -57,6 +58,7 @@
   font-size: 0.95rem;
   color: #4a3a63;
   margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 .selector-group select {
@@ -67,32 +69,314 @@
   color: #2f2540;
   font-size: 0.95rem;
   appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.selector-group select:hover {
+  border-color: #d0b8e6;
+}
+
+.selector-group select:focus {
+  outline: none;
+  border-color: #9370db;
+  box-shadow: 0 0 5px rgba(147, 112, 219, 0.3);
 }
 
 .form-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
-.comparar-button {
-    background-color: #13002e;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 25px;
-    border-radius: 10px;
-}
-.comparar-button:hover {
-    background-color: #2e0057;
-}
+
+.comparar-button,
 .reset-button {
-    background-color: #ffffff;
-    color: #13002e;
-    border: 2px solid #13002e;
-    padding: 10px 25px;
-    border-radius: 10px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid;
+  transition: all 0.3s ease;
 }
+
+.comparar-button {
+  background-color: #13002e;
+  color: white;
+  border-color: white;
+}
+
+.comparar-button:hover {
+  background-color: #2e0057;
+  box-shadow: 0 4px 12px rgba(19, 0, 46, 0.3);
+}
+
+.comparar-button:active {
+  transform: scale(0.98);
+}
+
+.reset-button {
+  background-color: #ffffff;
+  color: #13002e;
+  border-color: #13002e;
+}
+
 .reset-button:hover {
-    background-color: #f0e6fa;
+  background-color: #f0e6fa;
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.2);
 }
-    
+
+.reset-button:active {
+  transform: scale(0.98);
+}
+
+.advertencia-comparador {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #856404;
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comparador-resultado {
+  margin-top: 2rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.comparador-resultado h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjetas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-carrera {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(100, 80, 140, 0.1);
+  border-left: 5px solid #9370db;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-carrera:hover {
+  box-shadow: 0 8px 24px rgba(100, 80, 140, 0.15);
+  transform: translateY(-5px);
+}
+
+.tarjeta-carrera h3 {
+  color: #13002e;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.categoria-badge {
+  display: inline-block;
+  background: #e6dcf2;
+  color: #4a3a63;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+
+.carrera-detalle {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e6dcf2;
+}
+
+.carrera-detalle p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.carrera-detalle p strong {
+  color: #4a3a63;
+  font-weight: 600;
+}
+
+.carrera-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e6dcf2;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.info-item .label {
+  color: #4a3a63;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.info-item .valor {
+  color: #13002e;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.habilidades-seccion {
+  flex-grow: 1;
+}
+
+.habilidades-seccion p {
+  color: #4a3a63;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.habilidades-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.habilidad-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.habilidad-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.4);
+}
+
+@media (max-width: 768px) {
+  .comparador-main {
+    padding: 1rem 0.8rem 2rem;
+  }
+
+  .comparador-intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .selector-row {
+    flex-direction: column;
+  }
+
+  .selector-group {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .comparar-button,
+  .reset-button {
+    width: 100%;
+  }
+
+  .tarjetas-contenedor {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparador-resultado h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparador-main {
+    padding: 0.8rem 0.5rem 1.5rem;
+  }
+
+  .comparador-intro {
+    padding: 1rem 0.8rem;
+  }
+
+  .comparador-intro h1 {
+    font-size: 1.3rem;
+  }
+
+  .comparador-intro p {
+    font-size: 0.9rem;
+  }
+
+  .comparador-controls {
+    padding: 0.8rem;
+  }
+
+  .tarjeta-carrera {
+    padding: 1.5rem;
+  }
+
+  .tarjeta-carrera h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .habilidades-list {
+    gap: 0.5rem;
+  }
+
+  .habilidad-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

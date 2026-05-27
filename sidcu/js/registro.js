@@ -18,6 +18,8 @@ botonRegistro.addEventListener('click', function() {
         return;
     }
 
+    // Agregar el nuevo usuario
+    usuarios[usuario] = { contraseña: contraseña };
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     console.log('Usuario registrado:', usuario);

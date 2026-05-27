@@ -1,0 +1,202 @@
+.info-main {
+  padding: 1.6rem 1rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.info-container {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(100, 80, 140, 0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+.info-container img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.info-texto {
+  padding: 2rem;
+}
+
+.info-texto h1 {
+  color: #13002e;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.categoria {
+  display: inline-block;
+  background: #e6dcf2;
+  color: #4a3a63;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.info-texto p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #f8f5fc;
+  border-left: 5px solid #9370db;
+  border-radius: 10px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(100, 80, 140, 0.12);
+}
+
+.info-card h3 {
+  color: #4a3a63;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.info-card p {
+  color: #13002e;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.habilidades,
+.campo-laboral,
+.universidades {
+  margin-top: 2rem;
+}
+
+.habilidades h2,
+.campo-laboral h2,
+.universidades h2 {
+  color: #13002e;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+#habilidadesLista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.habilidad {
+  display: inline-block;
+  background: linear-gradient(135deg, #9370db 0%, #b19cd9 100%);
+  color: #fff;
+  padding: 0.55rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.habilidad:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.4);
+}
+
+.campo-laboral p {
+  background: #f8f5fc;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #9370db;
+}
+
+#universidadesLista {
+  padding-left: 1.5rem;
+}
+
+#universidadesLista li {
+  margin-bottom: 0.8rem;
+  color: #4a3a63;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .info-main {
+    padding: 1rem 0.8rem 2rem;
+  }
+
+  .info-container img {
+    height: 300px;
+  }
+
+  .info-texto {
+    padding: 1.5rem;
+  }
+
+  .info-texto h1 {
+    font-size: 1.6rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .habilidades h2,
+  .campo-laboral h2,
+  .universidades h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .info-main {
+    padding: 0.8rem 0.5rem 1.5rem;
+  }
+
+  .info-container img {
+    height: 220px;
+  }
+
+  .info-texto {
+    padding: 1rem;
+  }
+
+  .info-texto h1 {
+    font-size: 1.4rem;
+  }
+
+  .categoria {
+    font-size: 0.8rem;
+  }
+
+  .habilidad {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.8rem;
+  }
+}
