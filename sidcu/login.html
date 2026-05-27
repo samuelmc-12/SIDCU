@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header></header>
     <main>
-        <div class="cajaLogin">
-            <input type="text" placeholder="Ingresa el usuario">
-            <input type="text" placeholder="Ingresa la contraseña">
-            <button>Ingresar</button>
+        <div class="container">
+                <div id="tituloLogin">
+                    <h2>LOGIN</h2>
+                </div>
+                <div id="formularioLogin">
+                    <label for="usuarioLogin">USUARIO</label>
+                    <input id="usuarioLogin" type="text" placeholder="Ingresa tu usuario">
+                    <br>
+                    <label for="contraseñaLogin">CONTRASEÑA</label>
+                    <input type="password" name="contraseñaLogin" id="contraseñaLogin" placeholder="Ingresa la contraseña">
+                    <br>
+                    <button id="botonLogin">INGRESAR</button>
+                    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                </div>
         </div>
     </main>
-    <footer></footer>
+
+    <script src="js/login.js"></script>
 </body>
 </html>
