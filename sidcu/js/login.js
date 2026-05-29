@@ -25,7 +25,7 @@ botonLogin.addEventListener('click', function() {
 
     sessionStorage.setItem('usuarioActual', usuario);
 
-    alert('¡Bienvenido ' + usuario + '!');
+    alert('¡Bienvenid@ ' + usuario + '!');
     
     window.location.href = 'index.html';
 }); 
