@@ -1,0 +1,51 @@
+USE SimuladorCarreras;
+
+CREATE PROCEDURE sp_total_estudiantes
+    @total INT OUTPUT
+AS
+BEGIN
+    SELECT @total = COUNT(*)
+    FROM estudiantes;
+END;
+
+DECLARE @resultado INT;
+
+EXEC sp_total_estudiantes @resultado OUTPUT;
+
+PRINT @resultado;
+
+CREATE PROCEDURE sp_estudiantes_ciudad
+    @ciudad VARCHAR(30),
+    @total INT OUTPUT
+AS
+BEGIN
+    SELECT @total = COUNT(*)
+    FROM estudiantes
+    WHERE ciudad = @ciudad;
+END;
+
+DECLARE @resultado INT;
+
+EXEC sp_estudiantes_ciudad
+    'Cali',
+    @resultado OUTPUT;
+
+PRINT @resultado;
+
+CREATE PROCEDURE sp_total_carreras_universidad
+    @idUniversidad INT,
+    @total INT OUTPUT
+AS
+BEGIN
+    SELECT @total = COUNT(*)
+    FROM universidad_carrera
+    WHERE iduniversidad = @idUniversidad;
+END;
+
+DECLARE @cantidad INT;
+
+EXEC sp_total_carreras_universidad
+    1,
+    @cantidad OUTPUT;
+
+PRINT @cantidad;

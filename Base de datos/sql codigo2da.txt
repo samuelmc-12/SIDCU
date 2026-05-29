@@ -1,0 +1,144 @@
+USE SimuladorCarreras;
+
+ALTER TABLE estudiantes
+ALTER COLUMN documento VARCHAR(15) NOT NULL;
+
+ALTER TABLE estudiantes
+ADD CONSTRAINT UQ_documento UNIQUE(documento); --me salía error porque en la tabla anterior tenia datos repetidos de documento 
+
+
+--aplique este código para eliminarlos porque no sabia como y busque con la ia y me dio este código y sirvió para eliminarlo 
+
+SELECT * FROM estudiantes;
+
+--identificar los duplicados 
+
+SELECT *
+FROM estudiantes
+ORDER BY documento;
+
+--para eliminarlo 
+
+DELETE FROM estudiantes
+WHERE id NOT IN (
+    SELECT MIN(id)
+    FROM estudiantes
+    GROUP BY documento
+);
+
+--ya después si pude crear el unique 
+
+ALTER TABLE estudiantes
+ADD CONSTRAINT UQ_documento UNIQUE(documento);
+
+ALTER TABLE carreras
+ALTER COLUMN nombre VARCHAR(60) NOT NULL;
+
+ALTER TABLE carreras
+ADD CONSTRAINT UQ_carrera UNIQUE(nombre);
+
+ALTER TABLE universidades
+ALTER COLUMN nombre VARCHAR(80) NOT NULL;
+
+ALTER TABLE universidades
+ADD CONSTRAINT UQ_universidad UNIQUE(nombre);
+
+ALTER TABLE interes
+ADD fecha_interes DATE DEFAULT GETDATE();
+
+CREATE TABLE interes_universidad (
+    id INT NOT NULL,
+    id_universidad INT NOT NULL,
+    PRIMARY KEY (id, id_universidad),
+    FOREIGN KEY (id) REFERENCES estudiantes(id),
+    FOREIGN KEY (id_universidad) REFERENCES universidades(id_universidad)
+);
+
+INSERT INTO estudiantes (documento, nombre, ciudad) VALUES
+('1001234567','Clara Lopez','Medellin'),
+('1009876543','Isaac Lopez','Bogota'),
+('1012349876','Sofia Ramirez','Cali'),
+('1001111111','Laura Gil','Medellin'),
+('1002222222','Juan Arboleda','Bogota'),
+('1003333333','Maria Lopez','Cali'),
+('1004444444','Andres Ruiz','Pereira'),
+('1005555555','Camila Torres','Medellin'),
+('1006666666','David Castro','Bogota'),
+('1007777777','Santiago Mora','Cali');
+
+INSERT INTO carreras (nombre, area) VALUES
+('Ingenieria de Sistemas','Tecnologia'),
+('Medicina','Salud'),
+('Derecho','Sociales'),
+('Psicologia','Salud'),
+('Administracion','Negocios'),
+('Arquitectura','Diseño'),
+('Contaduria','Negocios'),
+('Ingenieria Industrial','Ingenieria'),
+('Enfermeria','Salud'),
+('Comunicacion Social','Humanidades');
+
+INSERT INTO universidades (nombre, ciudad) VALUES
+('Universidad Nacional','Bogota'),
+('Universidad de Antioquia','Medellin'),
+('Universidad del Valle','Cali'),
+('Universidad EAFIT','Medellin'),
+('Universidad Javeriana','Bogota'),
+('Universidad del Norte','Barranquilla'),
+('Universidad UIS','Bucaramanga'),
+('Universidad de Caldas','Manizales'),
+('Universidad Surcolombiana','Neiva'),
+('Universidad Pontificia Bolivariana','Medellin');
+
+INSERT INTO interes (idestudiante, idcarrera) VALUES -- estudiantes interesados en carreras
+(1,1),(2,2),(3,3),(4,4),(5,5),
+(6,6),(7,7),(8,8),(9,9),(10,10);
+
+INSERT INTO universidad_carrera VALUES --universidad ofrece carrera
+(1,1),(2,2),(3,3),(4,4),(5,5),
+(6,6),(7,7),(8,8),(9,9),(10,10);
+
+INSERT INTO interes_universidad VALUES  --estudiante interesado en la universidad
+(1,1),(2,2),(3,3),(4,4),(5,5),
+(6,6),(7,7),(8,8),(9,9),(10,10);
+
+
+--cantidad estudiantes por ciudad 
+
+SELECT ciudad, COUNT(*) AS total_estudiantes
+FROM estudiantes
+GROUP BY ciudad;
+
+--cantidad estudiates por carrera 
+
+SELECT c.nombre, COUNT(*) AS total
+FROM interes i
+INNER JOIN carreras c ON i.idcarrera = c.idcarrera
+GROUP BY c.nombre;
+
+--universidades con mas de 1 carrera 
+
+SELECT u.nombre, COUNT(*) AS total
+FROM universidad_carrera uc
+INNER JOIN universidades u ON uc.iduniversidad = u.iduniversidad
+GROUP BY u.nombre
+HAVING COUNT(*) > 1;
+
+--estudiante mas carrera 
+
+SELECT e.nombre, c.nombre AS carrera
+FROM interes i
+INNER JOIN estudiantes e ON i.idestudiante = e.id
+INNER JOIN carreras c ON i.idcarrera = c.idcarrera;
+
+--intereses registrados hoy 
+
+SELECT COUNT(*) AS total_hoy
+FROM interes
+WHERE fecha_interes = CAST(GETDATE() AS DATE);
+
+--universidades una ciudad especifica 
+
+SELECT *
+FROM universidades
+WHERE ciudad = 'Medellin';

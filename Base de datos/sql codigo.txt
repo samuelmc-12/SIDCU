@@ -1,0 +1,64 @@
+CREATE TABLE estudiantes (
+id INT IDENTITY(1,1),
+documento VARCHAR(12),
+nombre VARCHAR(50),
+ciudad VARCHAR(30)
+);
+
+ALTER TABLE estudiantes 
+ADD CONSTRAINT PK_EST_ID PRIMARY KEY(id);
+
+CREATE TABLE carreras (
+idcarrera INT IDENTITY(1,1) PRIMARY KEY,
+nombre VARCHAR(50),
+area VARCHAR(30)
+);
+
+CREATE TABLE universidades (
+iduniversidad INT IDENTITY(1,1) PRIMARY KEY,
+nombre VARCHAR(80),
+ciudad VARCHAR(30)
+);
+
+CREATE TABLE interes (
+idestudiante INT,
+idcarrera INT,
+PRIMARY KEY (idestudiante, idcarrera),
+FOREIGN KEY (idestudiante) REFERENCES estudiantes(id),
+FOREIGN KEY (idcarrera) REFERENCES carreras(idcarrera)
+);
+
+INSERT INTO estudiantes (documento, nombre, ciudad)
+VALUES 
+('1001234567', 'Ana Torres', 'Medellín'),
+('1009876543', 'Carlos López', 'Bogotá'),
+('1012349876', 'Sofía Ramírez', 'Cali');
+
+INSERT INTO carreras (nombre, area)
+VALUES 
+('Ingeniería de Sistemas', 'Tecnología'),
+('Medicina', 'Salud'),
+('Derecho', 'Sociales')
+
+INSERT INTO universidades (nombre, ciudad)
+VALUES 
+('Universidad Nacional', 'Bogotá'),
+('Universidad de Antioquia', 'Medellín');
+
+INSERT INTO interes (idestudiante, idcarrera)
+VALUES 
+(1,1),
+(2,3),
+(3,2);
+
+SELECT * FROM estudiantes;
+
+SELECT * FROM interes;
+
+CREATE TABLE universidad_carrera (
+iduniversidad INT,
+idcarrera INT,
+PRIMARY KEY (iduniversidad, idcarrera),
+FOREIGN KEY (iduniversidad) REFERENCES universidades(iduniversidad),
+FOREIGN KEY (idcarrera) REFERENCES carreras(idcarrera)
+);
